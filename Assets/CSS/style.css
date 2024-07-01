@@ -1,0 +1,123 @@
+:root {
+    --color: #d26ae6;
+    --primary: #303439;
+    --text: white;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--color);
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+header {
+    padding: 15px 6% 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    padding: 5px 1% 5px 6%;
+    font-size: 2rem;
+}
+
+header article {
+    padding: 12px 0% 16px 6%;
+    display: flex;
+    flex-basis: 80%;
+    text-align: center;
+    color: var(--text);
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+.flex-item {
+    outline: 2px dashed var(--text);
+    margin: 1em;
+    min-height: 150px;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding-bottom: 0.3em;
+}
+
+.flex-item .card-header {
+    background-color: var(--primary);
+    text-align: left;
+    padding: 0.1em 0.5em;
+    border-style: var(--text);
+    outline: 2px solid var(--text);
+    border-radius: 0.2em;
+    width: 90%;
+    position: relative;
+    margin-top: -1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-header h2 {
+    font-size: 1.6rem;
+}
+
+.flex-item article {
+    padding-top: 0.3rem;
+    width: 90%;
+}
+
+.flex-item pre {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    margin: 0.5em 0.8em;
+    padding: 0.6em 0.4em;
+    border-radius: 0.2em;
+    width: 90%;
+    bottom: 0.5em;
+}
+
+.flex-item:hover, .flex-item:hover .card-header {
+    box-shadow: inset 0px 0px 8px
+rgba(232, 102, 236, 1), 0 0 15px
+rgba(232, 102, 236, 1);
+}
+
+.linear-gradient-background {
+    background: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%);
+}
+
+footer h3 {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 100%;
+    background: var(--primary);
+    bottom: 0;
+    padding: 40px;
+}
+
+/* TODO: Responsive text to fit tablet */
+@media screen and (width <=992px) {
+    .flex-item {
+        flex-basis: calc(50% - 2em);
+    }
+}
+
+/* TODO: Responsive text to fit phone */
+@media screen and (width <=768px) {
+    .flex-item {
+        flex-basis: 100%;
+    }
+}
